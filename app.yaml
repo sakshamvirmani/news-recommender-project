@@ -1,0 +1,12 @@
+runtime: python310
+
+entrypoint: streamlit run news_recommender_app.py --server.port=$PORT --server.address=0.0.0.0
+
+env_variables:
+  STREAMLIT_SERVER_HEADLESS: true
+  STREAMLIT_SERVER_ENABLECORS: false
+  STREAMLIT_BROWSER_GATHER_USAGE_STATS: false
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 1
